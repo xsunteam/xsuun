@@ -1,0 +1,1440 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xsun token</title>
+    <style>
+        /* أسلوب الصفحة */
+        body {
+            font-family: Arial, sans-serif;
+            /* اجعل الصورة خلفية للجسم وقم بتكرارها */
+            background: url('/Kkkkk6bd4cxzsdc.png') no-repeat center center fixed;
+            /* ضبط حجم الصورة بنسبة 100% من حجمها الأصلي */
+            background-size: 100% 100%;
+            color: black;
+            /* تغيير لون النص إلى الأسود */
+            margin: 0;
+        }
+
+
+        /* العناصر النصية مع تنسيق B */
+        p, button, input, strong {
+            background-color: #111;
+            color: white;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            font-weight: bold; /* تطبيق تنسيق الحروف B */
+        }
+        /* زر بداية التعدين */
+        #startMiningButton {
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+
+        /* إضافة هامش للعناصر */
+        p, button, input, strong {
+            margin-bottom: 10px;
+        }
+
+        /* إضافة تباعد بين العناصر */
+        .input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* أزرار تسجيل الدخول والخروج */
+        #loginButton, #logoutButton {
+            display: none;
+        }
+
+        .loggedIn #logoutButton {
+            display: block;
+        }
+
+        .loggedIn #loginContainer {
+            display: none;
+        }
+
+        /* Sidebar menu styles */
+        .sidebar {
+          
+         
+          
+            position: fixed;
+            left: -250px; /* Start hidden off-screen */
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            overflow-x: hidden;
+            padding-top: 20px;
+            transition: 0.3s; /* Smooth transition effect */
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            }
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            position: relative; /* يضاف هذا الخاصية للرسائل "Not open yet" */
+        }
+
+        .sidebar a:hover {
+            background-color: #4CAF50;
+    
+    
+    }
+      
+  
+        /* Button to show/hide the sidebar */
+        .menu-button {
+            position: fixed;
+            left: 0;
+            top: 20px;
+            background-color: #333;
+            padding: 10px 15px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        /* Roadmap container */
+        #roadMapContainer {
+            display: none;
+        }
+
+        /* تنسيق رسائل "Not open yet" */
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+            left: 100%; /* تحديد المسافة بين الرسالة والكلمة */
+            top: 0;
+        }
+
+        .sidebar a:hover .tooltip {
+            display: inline-block; /* عند تحويل المؤشر إلى الكلمة */
+        }
+
+        #withdrawButton[disabled] {
+            background-color: #777;
+            cursor: not-allowed;
+        }
+
+        #withdrawButton.disabled {
+            background-color: #777;
+            cursor: not-allowed;
+        }
+
+        /* Earnings grid layout */
+        .earnings-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .earnings-box {
+            background-color: #111;
+            color: white;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* تنسيق رسائل "Not open yet" لصناديق الإعلانات */
+        .earnings-box .tooltip {
+            background-color: #333;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+        }
+
+        .earnings-box:hover .tooltip {
+            display: inline-block;
+        }
+
+
+
+
+
+       
+
+        
+    </style>
+</head>
+<body>
+
+
+<!-- HTML -->
+
+<!-- HTML -->
+<!-- HTML -->
+<div class="sidebar" id="sidebar">
+  
+  <button id="sidebar-button">☰</button>
+  <!-- إطار لعرض الصورة -->
+  <div class="image-frame" id="imageFrame">
+    <img src="default-image.jpg" alt="User Image" id="userImage">
+    <input type="file" accept="image/*" id="imageInput" class="image-input">
+  </div>
+
+  <div class="sidebar-circle">
+    <p>UID: <span id="userUID"></span></p>
+  </div>
+   <a href="#" onclick="showMiningInterface()">Home</a>
+    <a href="#" onclick="showRoadmap()">Road map</a>
+  <a href="#" onclick="showInviteFriends()">Invite Friends</a>
+ 
+
+
+
+  <a href="#" onclick="showEarnings()">Earnings</a>
+    <a href="#" onclick="showKyc()">Kyc</a>
+    
+    
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- لاحظ الفراغ الزائد قبل !DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (بقية الرأس) ... -->
+</head>
+<body>
+    <!-- ... (المحتوى) ... -->
+</body>
+</html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xsun token</title>
+    <style>
+        /* أسلوب الصفحة */
+body {
+          font-family: Arial, sans-serif;
+          background-color: black;
+          /* تعيين لون الخلفية إلى الأسود */
+          color: white;
+          margin: 0;
+        }
+
+
+/* تحديد لون الحدود للعناصر p، button، input، و strong إلى اللون الأبيض */
+p, button, input, strong {
+    border: 2px solid white; /* لون الحدود الأبيض */
+       }
+        /* زر بداية التعدين */
+        #startMiningButton {
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+
+        /* إضافة هامش للعناصر */
+        p, button, input, strong {
+            margin-bottom: 10px;
+        }
+
+        /* إضافة تباعد بين العناصر */
+        .input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* أزرار تسجيل الدخول والخروج */
+        #loginButton, #logoutButton {
+            display: none;
+        }
+
+        .loggedIn #logoutButton {
+            display: block;
+        }
+
+        .loggedIn #loginContainer {
+            display: none;
+        }
+
+        /* Sidebar menu styles */
+    /* Sidebar menu styles */
+        .sidebar {
+            position: fixed;
+            left: -250px; /* Start hidden off-screen */
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            overflow-x: hidden;
+            padding-top: 20px;
+            transition: 0.3s; /* Smooth transition effect */
+        }
+
+        /* Button to show/hide the sidebar */
+/* تنسيق الكلمات داخل الشريط الجانبي */
+           .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            position: relative; 
+            
+             
+           }
+
+
+        .sidebar a:hover {
+            background-color: #4CAF50;
+        }
+        /* Roadmap container */
+        #roadMapContainer {
+            display: none;
+        }
+      
+        /* تنسيق رسائل "Not open yet" */
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+            left: 100%; /* تحديد المسافة بين الرسالة والكلمة */
+            top: 0;
+        }
+
+        .sidebar a:hover .tooltip {
+            display: inline-block; /* عند تحويل المؤشر إلى الكلمة */
+        }
+
+        #withdrawButton[disabled] {
+            background-color: #777;
+            cursor: not-allowed;
+        }
+
+        #withdrawButton.disabled {
+            background-color: #777;
+            cursor: not-allowed;
+        }
+
+        /* Earnings grid layout */
+        .earnings-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .earnings-box {
+            background-color: #111;
+            color: white;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* تنسيق رسائل "Not open yet" لصناديق الإعلانات */
+        .earnings-box .tooltip {
+            background-color: #333;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+        }
+
+        .earnings-box:hover .tooltip {
+            display: inline-block;
+        }
+.
+/* تنسيق إطار الصورة */
+/* تنسيق إطار الصورة */
+/* تنسيق إطار الصورة */
+./* تنسيق إطار الصورة */
+.image-frame-container {
+  position: relative;
+}
+
+.image-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px; /* تقليل حجم الإطار */
+  height: 80px; /* تقليل حجم الإطار */
+  overflow: hidden;
+  border-radius: 50%; /* لجعلها دائرية */
+  background-color: #ccc; /* لتوضيح المكان إذا لم تكن هناك صورة */
+}
+
+/* تنسيق مربع Uid */
+#userImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* تنسيق زر تحميل الصورة */
+.image-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* تحديد موقع العنوان Xs Xsun Token وتنسيقه */
+h2 {
+    color: white;
+    font-size: 10px;
+    text-align: right; /* المحاذاة إلى اليمين */
+    margin: 10px 20px 30px 40px; /* المسافة: أعلى 10px، يمين 20px، أسفل 30px، يسار 40px */
+    font-weight: bold; /* تحديد تنسيق B */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* إضافة ظل لزيادة التباين */
+}
+
+/* تحديد موقع النص الأفقي */
+h1 {
+    color: white;
+    font-size: 36px;
+    margin: 0;
+    text-align: right; /* تحديد موقع النص إلى اليمين */
+    font-weight: bold; /* تحديد تنسيق B */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* إضافة ظل لزيادة التباين */
+}
+
+
+/* إضافة ستايل لمربع الرسالة */
+#notificationBox {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid black;
+  display: none;
+  margin-left: 10px;
+  /* تعيين المسافة بين الزر ومربع الرسالة هنا */
+}
+#earningsContainer p {
+  margin-top: 90px;
+  color: white;
+  font-size: 16px;
+}
+
+#earningsContainer h1 {
+  text-align: right;
+  /* تحديد النص إلى اليمين */
+}
+
+     .reward-message {
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       padding: 20px;
+       background-color: #4CAF50;
+       color: white;
+       font-size: 18px;
+       border-radius: 8px;
+       text-align: center;
+       display: none;
+     } 
+      
+   
+ {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+#game-board {
+  border: 1px solid #000;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(30, 10px);
+  grid-template-rows: repeat(30, 10px);
+}
+
+.snake {
+  width: 10px;
+  height: 10px;
+  background-color: #00f;
+  position: absolute;
+}
+
+#snake-head {
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* لون رأس الثعبان */
+  position: absolute;
+}
+
+.food {
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  position: absolute;
+}
+
+#start-button {
+  margin-top:5px;
+  padding: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+p {
+  background-color: black; /* لون الخلفية السوداء */
+  color: white; /* لون النص */
+  padding: 10px; /* تباعد النص عن الحواف الداخلية */
+  border-radius: 10px; /* التنويع في حواف المربع */
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- Button to show/hide sidebar -->
+    <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
+    
+    <!-- Content -->
+    <div class="center-screen">
+          <h2>XS XSUN TOKEN </h2>
+                         
+                <h1>MAX SUPPLY 50000</h1>
+          <p>Time Left: <span id="countdown">12:00:00</span></p>
+          <p>Balance: <span id="balance">0.0000000000</span> Xsun</p>
+          <p id="balanceInUSD">Balance in USD: $0.00</p>
+          1XSUN=500$
+          <button id="startMiningButton" onclick="startMining()">Start Mining</button>
+          <div class="input-container">
+    <label for="enterWalletAddress" style="color: white;">Enter wallet address </label>
+    <input type="text" id="enterWalletAddress" placeholder="ETH NETWORK">
+</div>
+
+     <div class="input-container">
+    <label for="withdrawAmount" style="color: white;">Amount</label>
+    <input type="text" id="withdrawAmount" onkeydown="if (event.key === 'Enter') withdrawAmount()">
+    
+</div>
+<button id="withdrawButton" disabled onclick="withdrawAmount()" class="disabled" style="color: white;">Withdraw<span id="withdrawMessage" style="display: none;">Coming soon</span></button>
+
+       
+    </div>
+    
+    <div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: #333; padding: 10px; display: flex; justify-content: space-between; width: 100%;">
+        <button onclick="showEarnings()">💰 Earnings</button>
+        <button onclick="showKyc()">🔐 KYC</button>
+        <button onclick="showRoadmap()">🗺️ Roadmap</button>
+        <button onclick="showMiningInterface()">🏠 Home</button>
+    </div>
+
+    <!-- Roadmap container -->
+    <div id="roadMapContainer">
+        <!-- هنا سيتم عرض خريطة الطريق -->
+        <h2>Road map</h2>
+        <p>December. 2023 Xsun launching</p>
+        
+        <p>july: 2024 Global active users Reach 0.2m</p>
+        
+        <p>feb: 2024 Open users Withdraw</p>
+        
+        <p>Aug: 2024 Add 10ETH liquidity Uniswap</p>
+        
+        <p>dec:2024 My token listing on 3 major exchanges</p>
+        
+        <p>feb: 2025 Launching an intelligent bot to transform real images into cartoons and directly send them to OpenSea.</p>
+         <p>feb:2025 
+         Launching an intelligent Telegram bot, Sun GPT, filled with information and imaginative images.</p>
+         
+               <p>jan:2026 Upgrad</p>
+        
+        
+            <p>Hello and welcome to our vibrant community, where mining XS is not just a process its a collective journey. We are not merely a team, but a united force, bound by the shared vision of XS success.
+              
+              Your efforts won't go unnoticed; mining here isn't about years of labor for mere cents. We value your hard work profoundly because trust and credibility are the cornerstones of our success and, by extension the success of XS.
+              
+              In this venture, we strive to mutually share the profits with our community. Your engagement isn't just an advertisement; it's a win for you, enhancing our liquidity and promoting further growth. Share it with your inner circle as much as possible.
+              
+              No referral rewards? Theres a reason. We aim for fair distribution and the ability to pay everyone justly. Our project extends beyond this app its a grand vision. Smart bots will be developed, challenging major platforms, all accessible through Xs (xsun) currency.
+              
+              And here's the positive twist – withdrawals will be not only seamless but also fee-free. No gas fees to worry about. Our project is expansive, and its evolving. Expect more intelligent features, surpassing traditional platforms_____________
+              
+              Best regards,
+              The XSUN Team</p>
+        
+        
+        
+        <!-- زر Home للانتقال إلى الواجهة الرئيسية -->
+        <button id="homeButton" onclick="showMiningInterface()">Home</button>
+    </div>
+    
+
+
+
+<!-- داخل earnings صفحة -->
+<div id="earningsContainer" style="display: none;">
+          <p>snake game: Play and win! For every meal the snake gets, you earn 0.00009 XS </p>
+    
+  
+<!-- داخل العنصر الذي يحتوي على رصيد اللعبة -->
+<div class="earnings-box treasure-box" onclick="watchAdAndEarn(0.001)" style="background-color: black; color: white; border: 2px solid black; border-radius: 5px; padding: 20px; text-align: center; font-size: 24px;">
+    EARN XSUN 💰💰</div> 
+       
+<!-- داخل العنصر الذي يحتوي على رصيد اللعبة -->
+  Game Score: <span id="gameScore">0.0000000000</span> Xsun 
+
+    
+    <div id="game-board"></div>
+  <button id="start-button">Start</button>
+
+  <div class="earnings-grid">
+    <!-- مثال لمربع إعلاني -->
+
+
+
+<!-- داخل العنصر الذي يحتوي على رصيد أرباح اللعبة -->
+
+
+
+    
+    
+  
+        
+        
+        
+        
+        
+        <!-- تكرار هذا لإنشاء مربعات إعلانية أخرى -->
+    </div>
+</div>
+
+
+
+    <!-- واجهة التوثيق KYC -->
+    <div id="kycContainer" style="display: none;">
+      soon
+        <h2 style="color: white;">KYC Verification</h2>
+        <form id="kycForm" enctype="multipart/form-data">
+            <div class="input-container">
+                <label for="fullName" style="color: white;">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="input-container">
+                <label for="nationalID" style="color: white;">National ID:</label>
+                <input type="text" id="nationalID" name="nationalID" required>
+            </div>
+            <div class="input-container">
+                <label for="idFront" style="color: white;">Front of ID Card:</label>
+                <input type="file" accept="image/*" id="idFront" name="idFront" required>
+            </div>
+            <div class="input-container">
+                <label for="idBack" style="color: white;">Back of ID Card:</label>
+                <input type="file" accept="image/*" id="idBack" name="idBack" required>
+            </div>
+<label for="selfieButton" style="color: white;">Take a Selfie:</label>
+<input type="file" accept="image/*" id="selfieButton" name="selfieButton" capture="user" onclick="openCamera()" required>
+
+
+
+            <button type="submit">Submit KYC</button>
+        </form>
+    </div>
+
+    <div id="inviteFriendsContainer" style="display: none;">
+  <h2>Invite Friends</h2>
+  <p>Referrals programs</p>
+  <input type="text" id="invitationCode" readonly>
+  <button onclick="yourInvitationCode()">your invitation Code</button>
+  <input type="text" id="referralCode" placeholder="Enter your friend's referral code">
+  <button onclick="showNotification()">Apply</button>
+<div id="notificationBox" class="hidden">Close</div>
+
+  
+
+  <p>Referral Rewards:0.0005 Per referral</p>
+  <ul id="referralList">
+    <!-- سيتم إضافة الأكواد والمكافآت هنا -->
+  </ul>
+    
+        
+        <!-- نموذج لإدخال رمز الدعوة -->
+        <div id="referralForm" style="display: none;">
+            <label for="referralCode" style="color: white;">Enter Referral Code:</label>
+            <input type="text" id="referralCode" placeholder="Enter your friend's referral code">
+            <button onclick="applyReferralCode()">Apply</button>
+        </div>
+<!-- نص لعرض المكافآت والرصيد المرتبط بنظام الدعوات -->
+<p>Referral Balance: <span id="referralBalance">0.0000000000</span> Xsun</p>
+<p>Total Referral users: <span id="totalReferralusers">0
+</div>
+    <!-- السكريبت -->
+    <script>
+     var miningInterval;
+var userTimeLeftInSeconds = parseFloat(localStorage.getItem('userTimeLeftInSeconds')) || 43200;
+var userBalance = parseFloat(localStorage.getItem('userBalance')) || 0.0000000000;
+var xsunToUSD = 500.00;
+
+function updateCountdown() {
+    if (userTimeLeftInSeconds > 0) {
+        userTimeLeftInSeconds--;
+        localStorage.setItem('userTimeLeftInSeconds', userTimeLeftInSeconds);
+
+        var hours = Math.floor(userTimeLeftInSeconds / 3600);
+        var minutes = Math.floor((userTimeLeftInSeconds % 3600) / 60);
+        var seconds = userTimeLeftInSeconds % 60;
+
+        var countdownText = hours.toString().padStart(2, '0') + ':' +
+            minutes.toString().padStart(2, '0') + ':' +
+            seconds.toString().padStart(2, '0');
+
+        document.getElementById('countdown').textContent = countdownText;
+
+        userBalance += 0.00000001;
+        var formattedBalance = userBalance.toFixed(10);
+        document.getElementById('balance').textContent = formattedBalance;
+
+        var balanceInUSD = (userBalance * xsunToUSD).toFixed(2);
+        document.getElementById('balanceInUSD').textContent = "Balance in USD: $" + balanceInUSD;
+
+        localStorage.setItem('userBalance', formattedBalance);
+    } else {
+        clearInterval(miningInterval);
+        document.getElementById('startMiningButton').disabled = false;
+    }
+}
+
+function startMining() {
+    if (userTimeLeftInSeconds <= 0) {
+        userTimeLeftInSeconds = 43200;
+        localStorage.setItem('userTimeLeftInSeconds', userTimeLeftInSeconds);
+        updateDisplay();
+    }
+
+    miningInterval = setInterval(updateCountdown, 1000);
+    localStorage.setItem('lastMiningStartTime', Date.now());
+}
+
+function updateDisplay() {
+    var formattedBalance = userBalance.toFixed(10);
+    document.getElementById('balance').textContent = formattedBalance;
+
+    var balanceInUSD = (userBalance * xsunToUSD).toFixed(2);
+    document.getElementById('balanceInUSD').textContent = "Balance in USD: $" + balanceInUSD;
+
+    if (userTimeLeftInSeconds <= 0) {
+        document.getElementById('startMiningButton').disabled = false;
+        document.getElementById('withdrawButton').disabled = true;
+    } else {
+        document.getElementById('startMiningButton').disabled = true;
+        document.getElementById('withdrawButton').disabled = false;
+    }
+}
+
+document.getElementById('withdrawButton').disabled = true;
+
+// استعادة الوقت الماضي منذ آخر تشغيل للتطبيق
+var lastMiningStartTime = parseFloat(localStorage.getItem('lastMiningStartTime')) || 0;
+var elapsedTimeSinceLastMining = Math.floor((Date.now() - lastMiningStartTime) / 1000);
+userTimeLeftInSeconds -= elapsedTimeSinceLastMining;
+
+// تحديث وقت بدء التعدين
+localStorage.setItem('lastMiningStartTime', Date.now());
+
+// بمجرد استرجاع الوقت الماضي وتحديث وقت بدء التعدين، يمكنك استخدام هذا الكود للتحقق من صحة الوقت المتبقي
+if (userTimeLeftInSeconds > 0) {
+    miningInterval = setInterval(updateCountdown, 1000);
+}
+
+updateDisplay(); // لتحديث العرض عند فتح الصفحة
+
+
+
+
+
+
+
+    // تعطيل الزر "Withdraw"
+    document.getElementById('withdrawButton').disabled = true;
+
+    function updateDisplay() {
+      var formattedBalance = userBalance.toFixed(10);
+      document.getElementById('balance').textContent = formattedBalance;
+
+      // حساب الرصيد بالدولار وتحديثه
+      var balanceInUSD = (userBalance * xsunToUSD).toFixed(2);
+      document.getElementById('balanceInUSD').textContent = "Balance in USD: $" + balanceInUSD;
+
+      if (userTimeLeftInSeconds <= 0) {
+        document.getElementById('startMiningButton').disabled = false;
+        document.getElementById('withdrawButton').disabled = true;
+      } else {
+        document.getElementById('startMiningButton').disabled = true;
+        document.getElementById('withdrawButton').disabled = false;
+      }
+
+      countdownInterval = setInterval(updateCountdown, 1000);
+    }
+
+    updateDisplay(); // لتحديث العرض عند فتح الصفحة
+// تعطيل الزر "Withdraw"
+document.getElementById('withdrawButton').disabled = true;
+
+function updateDisplay() {
+  var formattedBalance = userBalance.toFixed(10);
+  document.getElementById('balance').textContent = formattedBalance;
+
+  // حساب الرصيد بالدولار وتحديثه
+  var balanceInUSD = (userBalance * xsunToUSD).toFixed(2);
+  document.getElementById('balanceInUSD').textContent = "Balance in USD: $" + balanceInUSD;
+
+  if (userTimeLeftInSeconds <= 0) {
+    document.getElementById('startMiningButton').disabled = false;
+    document.getElementById('withdrawButton').disabled = true;
+  } else {
+    document.getElementById('startMiningButton').disabled = true;
+    document.getElementById('withdrawButton').disabled = false;
+  }
+
+  countdownInterval = setInterval(updateCountdown, 1000);
+}
+
+// ... (الجزء السابق من السكربت)
+
+window.onbeforeunload = function() {
+  // حفظ الحالة الحالية عند غلق الصفحة
+  localStorage.setItem('userTimeLeftInSeconds', userTimeLeftInSeconds);
+  localStorage.setItem('userBalance', userBalance.toFixed(10));
+};
+
+// ... (الجزء الباقي من السكربت)
+
+
+
+        function showMiningInterface() {
+            document.getElementById('earningsContainer').style.display = 'none';
+            document.getElementById('kycContainer').style.display = 'none';
+            document.getElementById('roadMapContainer').style.display = 'none';
+            document.getElementById('inviteFriendsContainer').style.display = 'none';
+            document.querySelector('.center-screen').style.display = 'block';
+        }
+        
+        
+        
+
+function showEarnings() {
+    // قم بإخفاء المحتوى الحالي لصفحة الأرباح
+    document.getElementById('kycContainer').style.display = 'none';
+    document.getElementById('roadMapContainer').style.display = 'none';
+    document.getElementById('inviteFriendsContainer').style.display = 'none';
+    document.querySelector('.center-screen').style.display = 'none';
+    document.getElementById('earningsContainer').style.display = 'block';
+
+    // عرض إعلان اختبار
+    document.getElementById('ad-container').style.display = 'block';
+
+    // إضافة مزيد من الإعلانات إذا كنت ترغب في ذلك
+
+    // تكامل مفتاح وحدة الإعلان
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-app-pub-3940256099942544",  // استبدال بمفتاح وحدة الإعلان الخاص بك
+        enable_page_level_ads: true
+    });
+}
+
+      const gameBoard = document.getElementById('game-board');
+    const startButton = document.getElementById('start-button');
+
+    let snake = [{ x: 15, y: 15 }];
+    let food = { x: 0, y: 0 };
+    let gameInterval;
+    let touchStartX, touchStartY;
+    let direction = 'right';
+
+    function draw() {
+      gameBoard.innerHTML = '';
+
+      snake.forEach(segment => {
+        const snakeElement = document.createElement('div');
+        snakeElement.style.gridRowStart = segment.y;
+        snakeElement.style.gridColumnStart = segment.x;
+        snakeElement.classList.add('snake');
+        gameBoard.appendChild(snakeElement);
+      });
+
+      const foodElement = document.createElement('div');
+      foodElement.style.gridRowStart = food.y;
+      foodElement.style.gridColumnStart = food.x;
+      foodElement.classList.add('food');
+      gameBoard.appendChild(foodElement);
+    }
+
+    function getRandomPosition() {
+      return Math.floor(Math.random() * 30) + 1;
+    }
+
+    function createFood() {
+      food = {
+        x: getRandomPosition(),
+        y: getRandomPosition()
+      };
+    }
+
+    function update() {
+      const head = { ...snake[0] };
+
+      switch (direction) {
+        case 'up':
+          head.y--;
+          break;
+        case 'down':
+          head.y++;
+          break;
+        case 'left':
+          head.x--;
+          break;
+        case 'right':
+          head.x++;
+          break;
+      }
+
+      // Check if snake hits the wall and adjust direction
+      if (head.x < 1) head.x = 30;
+      if (head.x > 30) head.x = 1;
+      if (head.y < 1) head.y = 30;
+      if (head.y > 30) head.y = 1;
+
+      // Check if snake hits itself
+      if (checkCollision()) {
+        clearInterval(gameInterval);
+        alert('Game Over! Press Start to play again.');
+        startButton.disabled = false;
+        return;
+      }
+
+      snake.unshift(head);
+
+      // Check if snake eats food
+      if (head.x === food.x && head.y === food.y) {
+        createFood();
+      } else {
+        snake.pop();
+      }
+    }
+
+    function checkCollision() {
+      return snake.slice(1).some(segment => segment.x === snake[0].x && segment.y === snake[0].y);
+    }
+
+    function gameLoop() {
+      update();
+      draw();
+    }
+
+    function startGame() {
+      snake = [{ x: 15, y: 15 }];
+      direction = 'right';
+      createFood();
+      if (gameInterval) clearInterval(gameInterval);
+      gameInterval = setInterval(gameLoop, 100);
+      startButton.disabled = true;
+    }
+
+    startButton.addEventListener('click', startGame);
+
+    document.addEventListener('keydown', (event) => {
+      switch (event.key) {
+        case 'ArrowUp':
+          direction = 'up';
+          break;
+        case 'ArrowDown':
+          direction = 'down';
+          break;
+        case 'ArrowLeft':
+          direction = 'left';
+          break;
+        case 'ArrowRight':
+          direction = 'right';
+          break;
+      }
+    });
+
+    gameBoard.addEventListener('touchstart', (event) => {
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+    });
+
+    gameBoard.addEventListener('touchend', (event) => {
+      const touchEndX = event.changedTouches[0].clientX;
+      const touchEndY = event.changedTouches[0].clientY;
+
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Horizontal swipe
+        direction = deltaX > 0 ? 'right' : 'left';
+      } else {
+        // Vertical swipe
+        direction = deltaY > 0 ? 'down' : 'up';
+      }
+    });
+
+    // Initial game start
+    startGame();
+
+
+function update() {
+  const head = { ...snake[0] };
+
+  switch (direction) {
+    case 'up':
+      head.y--;
+      break;
+    case 'down':
+      head.y++;
+      break;
+    case 'left':
+      head.x--;
+      break;
+    case 'right':
+      head.x++;
+      break;
+  }
+
+  // Check if snake hits the wall and adjust direction
+  if (head.x < 1) head.x = 30;
+  if (head.x > 30) head.x = 1;
+  if (head.y < 1) head.y = 30;
+  if (head.y > 30) head.y = 1;
+
+  // Check if snake hits itself
+  if (checkCollision()) {
+    clearInterval(gameInterval);
+    alert('Game Over! Press Start to play again.');
+    startButton.disabled = false;
+    return;
+  }
+
+  snake.unshift(head);
+
+  // Check if snake eats food
+  if (head.x === food.x && head.y === food.y) {
+    createFood();
+
+    // إذا أكل الدودة الطعام، زود رصيد المستخدم بمقدار 0.00009
+    userBalance += 0.00009;
+    var formattedBalance = userBalance.toFixed(10);
+    document.getElementById('balance').textContent = formattedBalance;
+
+    // يمكنك هنا إجراء إضافي إذا كنت بحاجة إلى تحديث عرض الرصيد الآخر أو غيره
+  } else {
+    snake.pop();
+  }
+}
+
+// داخل دالة update()
+function update() {
+  const head = { ...snake[0] };
+
+  switch (direction) {
+    case 'up':
+      head.y--;
+      break;
+    case 'down':
+      head.y++;
+      break;
+    case 'left':
+      head.x--;
+      break;
+    case 'right':
+      head.x++;
+      break;
+  }
+
+  // Check if snake hits the wall and adjust direction
+  if (head.x < 1) head.x = 30;
+  if (head.x > 30) head.x = 1;
+  if (head.y < 1) head.y = 30;
+  if (head.y > 30) head.y = 1;
+
+  // Check if snake hits itself
+  if (checkCollision()) {
+    clearInterval(gameInterval);
+    alert('Game Over! Press Start to play again.');
+    startButton.disabled = false;
+    return;
+  }
+
+  snake.unshift(head);
+
+  // Check if snake eats food
+  if (head.x === food.x && head.y === food.y) {
+    createFood();
+
+    // إذا أكل الدودة الطعام، زود رصيد المستخدم بمقدار 0.00009
+    userBalance += 0.000009;
+    var formattedBalance = userBalance.toFixed(10);
+    document.getElementById('balance').textContent = formattedBalance;
+
+    // إضافة الرصيد إلى Game Score
+    gameScore += 0.00009;
+
+    // سجل رصيد اللعبة - إضافة قيمة جديدة إلى نهاية المصفوفة
+    gameScoreHistory.push(gameScore);
+
+    // سجل أرباح اللعبة - إضافة قيمة جديدة إلى نهاية المصفوفة
+    earningsHistory.push(gameScore);
+
+    // ... (الكود الحالي)
+
+    // بعد زيادة رصيد اللعبة، قم بتحديث عرضها
+    updateGameScoreDisplay();
+    updateEarningsDisplay();
+  } else {
+    snake.pop();
+  }
+}
+// أعلى السكربت
+// أعلى السكربت
+let gameScore = parseFloat(localStorage.getItem('gameScore')) || 0.0000000000;
+let gameScoreHistory = []; // سجل رصيد اللعبة
+let earningsHistory = [];  // سجل أرباح اللعبة
+
+
+
+
+
+
+// داخل دالة `updateGameScoreDisplay()`
+function updateGameScoreDisplay() {
+    // ... (الكود الحالي)
+
+    // بعد تحديث عرض رصيد اللعبة، قم بتحديث سجل رصيد اللعبة في صفحة الأرباح
+    updateGameScoreHistoryDisplay();
+
+    // قم بحفظ رصيد اللعبة في localStorage
+    localStorage.setItem('gameScore', gameScore.toString());
+}
+
+
+
+
+// داخل دالة updateGameScoreDisplay()
+function updateGameScoreDisplay() {
+    var formattedGameScore = gameScore.toFixed(10);
+    document.getElementById('gameScore').textContent = formattedGameScore;
+
+    // سجل رصيد اللعبة - إضافة قيمة جديدة إلى نهاية المصفوفة
+    gameScoreHistory.push(gameScore);
+
+    // ... (الكود الحالي)
+
+    // بعد تحديث عرض رصيد اللعبة، قم بتحديث سجل رصيد اللعبة في صفحة الأرباح
+    updateGameScoreHistoryDisplay();
+
+    // قم بحفظ رصيد اللعبة في localStorage
+    localStorage.setItem('gameScore', gameScore.toString());
+}
+
+// داخل دالة updateGameScoreHistoryDisplay()
+function updateGameScoreHistoryDisplay() {
+    var formattedGameScoreHistory = gameScoreHistory.map(score => score.toFixed(10)).join(', ');
+    document.getElementById('gameScoreHistory').textContent = '[' + formattedGameScoreHistory + ']';
+
+}
+
+
+
+
+        function showKyc() {
+            document.getElementById('earningsContainer').style.display = 'none';
+            document.getElementById('roadMapContainer').style.display = 'none';
+            document.getElementById('inviteFriendsContainer').style.display = 'none';
+            document.querySelector('.center-screen').style.display = 'none';
+            document.getElementById('kycContainer').style.display = 'block';
+        }
+
+        function showRoadmap() {
+            document.getElementById('earningsContainer').style.display = 'none';
+            document.getElementById('kycContainer').style.display = 'none';
+            document.getElementById('inviteFriendsContainer').style.display = 'none';
+            document.querySelector('.center-screen').style.display = 'none';
+            document.getElementById('roadMapContainer').style.display = 'block';
+            document.getElementById('invitationCode').value = userReferralCode;
+
+        }
+
+        function showInviteFriends() {
+            document.getElementById('earningsContainer').style.display = 'none';
+            document.getElementById('kycContainer').style.display = 'none';
+            document.getElementById('roadMapContainer').style.display = 'none';
+            document.querySelector('.center-screen').style.display = 'none';
+            document.getElementById('inviteFriendsContainer').style.display = 'block';
+            
+           
+        }
+// قم بتعيين الرمز الثابت لكل مستخدم هنا
+
+
+        var referralCodes = JSON.parse(localStorage.getItem
+         ('referralCodes')) || {};
+         
+var userReferralCode = localStorage.getItem('userReferralCode');
+
+// إذا لم يكن لديك كود دعوة مسبقًا، قم بإنشاء كود جديد وقم بحفظه في Local Storage
+if (!userReferralCode) {
+    userReferralCode = generateRandomReferralCode();
+    localStorage.setItem('userReferralCode', userReferralCode);
+}
+
+
+
+function generateAndAddReferralCode() {
+    // توليد رمز دعوة عشوائي
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var code = '';
+    for (var i = 0; i < 6; i++) {
+        code += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    
+    // إضافة الرمز الجديد إلى هيكل البيانات
+    
+    
+    // يمكنك هنا إضافة المزيد من الخطوات إذا كنت بحاجة إلى تنفيذ إجراءات إضافية
+
+
+// استدعاء الدالة لتوليد وإضافة رمز دعوة جديد
+generateAndAddReferralCode();
+
+   
+      return code;
+   
+      }
+    
+   
+document.getElementById('invitationCode').value = userReferralCode;
+
+
+        function applyReferralCode() {
+    if (!referralCodeUsed) {
+        var userReferralCode = localStorage.getItem('userReferralCode');
+        if (!userReferralCode) {
+            alert('You do not have a referral code.');
+            return;
+        }
+
+        var friendReferralCode = document.getElementById('referralCode').value;
+        if (friendReferralCode === userReferralCode) {
+            alert('You cannot use your own referral code.');
+            return;
+        }
+
+        var friendReward = 0.001;
+        userBalance += friendReward;
+        var formattedBalance = userBalance.toFixed(10);
+        document.getElementById('balance').textContent = formattedBalance;
+
+        referralCodes[userReferralCode] = (referralCodes[userReferralCode] || 0) + friendReward;
+
+        var totalReferralEarnings = referralCodes[userReferralCode];
+
+        document.getElementById('referralBalance').textContent = totalReferralEarnings.toFixed(10);
+
+        localStorage.setItem('referralCodes', JSON.stringify(referralCodes));
+
+        // قم بتعيين referralCodeUsed ليشير إلى أن رمز الدعوة تم استخدامه بالفعل
+        referralCodeUsed = true;
+    } else {
+        alert('You have already used a referral code.');
+    }
+}
+
+function showNotification() {
+    var notificationBox = document.getElementById('notificationBox');
+    notificationBox.style.display = 'block';
+    
+    setTimeout(function() {
+        notificationBox.style.display = 'none';
+    }, 4000); // 4 ثوانٍ
+}
+
+            
+            
+            
+        
+        function withdrawAmount() {
+            if (userBalance >= 1.0000000000) {
+                alert('Withdrawal successful!'); // يمكنك هنا تنفيذ عملية السحب الفعلية
+                userBalance -= 1.0000000000;
+                var formattedBalance = userBalance.toFixed(10);
+                document.getElementById('balance').textContent = formattedBalance;
+                localStorage.setItem('userBalance', formattedBalance);
+                document.getElementById('withdrawButton').disabled = true;
+            } else {
+                alert('Insufficient balance for withdrawal.');
+            }
+        }
+
+
+
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '-250px') {
+                sidebar.style.left = '0';
+            } else {
+                sidebar.style.left = '-250px';
+            }
+            
+            // JavaScript
+// JavaScript
+var imageFrame = document.getElementById('imageFrame');
+var userImage = document.getElementById('userImage');
+var imageInput = document.getElementById('imageInput');
+
+// استعراض المسار المحفوظ للصورة من Local Storage
+var savedImagePath = localStorage.getItem('userImage');
+
+// إذا كان هناك مسار محفوظ، قم بتعيينه كمصدر للصورة
+if (savedImagePath) {
+    userImage.src = savedImagePath;
+}
+
+// أضف مستمع حدث لتحميل الصورة عند اختيارها
+imageInput.addEventListener('change', function () {
+    var selectedImage = imageInput.files[0];
+    if (selectedImage) {
+        var reader = new FileReader();
+
+        // قم بقراءة الصورة وتعيينها كمصدر للصورة داخل الإطار
+        reader.onload = function (e) {
+            userImage.src = e.target.result;
+            
+            // قم بحفظ مسار الصورة المحددة في Local Storage
+            localStorage.setItem('userImage', e.target.result);
+        };
+
+        // قم بقراءة الصورة المحددة
+        reader.readAsDataURL(selectedImage);
+    }
+});
+
+             // Function to close the sidebar...
+        function closeSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.style.left = "-250px";
+        }
+
+        // Add event listeners to close the sidebar when links are clicked...
+        var sidebarLinks = document.querySelectorAll(".sidebar a");
+        for (var i = 0; i < sidebarLinks.length; i++) {
+            sidebarLinks[i].addEventListener("click", closeSidebar);
+        }
+
+        // Add event listener to close the sidebar on mobile screen tap...
+        document.addEventListener("click", function(event) {
+            var screenWidth = window.innerWidth;
+            if (screenWidth <= 768) { // Adjust this value based on your design's breakpoint
+                if (!event.target.matches('.menu-button')) {
+                    closeSidebar();
+                }
+            }
+        });
+  
+            
+            
+            
+            
+            
+            // تحقق مما إذا كان لديك UID محفوظ في Local Storage
+// مصفوفة تحتوي على الأرقام من 0 إلى 9
+var digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+// تحقق مما إذا كان لديك UID محفوظ في Local Storage
+var userUID = localStorage.getItem('userUID');
+
+// إذا كان لديك UID، قم بعرضه في المربع
+if (userUID) {
+    document.getElementById('userUID').textContent = userUID;
+} else {
+    // إذا لم يكن لديك UID بعد، قم بإنشاء واحد واحفظه في Local Storage
+    userUID = generateUniqueUID();
+    localStorage.setItem('userUID', userUID);
+
+    // عرض ال UID داخل المربع
+    document.getElementById('userUID').textContent = userUID;
+}
+
+// توليد UID فريد ومميز
+function generateUniqueUID() {
+    var uid = '';
+    for (var i = 0; i < 8; i++) {
+        // اختيار عشرة أرقام عشوائيًا من المصفوفة وإضافتها إلى UID
+        uid += digits[Math.floor(Math.random() * 10)];
+    }
+    return uid;
+
+
+    
+
+}
+
+
+document.getElementById('logoutLink').addEventListener('click', function() {
+    var confirmation = confirm("Are you sure?");
+    if (confirmation) {
+        // يتم تنفيذ الإجراءات المطلوبة عند النقر على "Yes" هنا
+        alert("You will be logged out!"); // قم بتغيير هذه الجملة بالإجراءات الفعلية
+    } else {
+        // لا يتم تنفيذ أي إجراء عند النقر على "No"
+    }
+});
+
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
